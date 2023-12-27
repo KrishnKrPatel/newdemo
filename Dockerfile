@@ -17,9 +17,7 @@ RUN apt-get update \
 
 COPY requirements/ /demo/requirements
 
-RUN python -m pip install -U pip==23.1.2 \
-    && pip install --no-cache-dir -r /tmp/requirements/dev.txt \
-    && rm -rf /tmp/requirements
+RUN pip install -r demo/requirements.txt
 
 WORKDIR /demo
 
